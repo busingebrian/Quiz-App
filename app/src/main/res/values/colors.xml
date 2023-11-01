@@ -2,4 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="Mate">#85687C</color>
+    <color name="Dark_Purple">#2E253C</color>
+    <color name="Orange">#DACC9C</color>
+    <color name="Lavente">#CBB7E5</color>
+    <color name="Light_purple">#85687C</color>
+    <color name="nav_bar_color">#85687C</color>
+    <color name="Haute_pink">#FFC0CB</color>
+    <color name="pastel_pink">#F8C8DC</color>
+    <color name="pink_orange">#F89880</color>
 </resources>
