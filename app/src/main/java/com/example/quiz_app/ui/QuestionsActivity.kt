@@ -1,5 +1,6 @@
 package com.example.quiz_app.ui
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +14,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.example.quiz_app.R
 import com.example.quiz_app.model.Question
+import com.example.quiz_app.utils.Constants
 
 class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var progressBar: ProgressBar
@@ -29,11 +31,13 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
     private var currentPosition = 0
     private lateinit var questionList: MutableList<Question>
-//    private var selectedOptionScore = 0
+
+    //    private var selectedOptionScore = 0
     private var selectedAnswer = 0
     private lateinit var currentQuestion: Question
     private var answered = false
-
+    private lateinit var name: String
+    private var score = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_questions)
@@ -60,6 +64,10 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
         questionList = com.example.quiz_app.utils.Constants.getQuestions()
         Log.d("QuestionSize", "${questionList.size}")
         showNextQuestion()
+        if (intent.hasExtra(Constants.USER_NAME)){
+            name = intent.getStringExtra(Constants.USER_NAME).toString()
+
+        }
     }
 
     private fun showNextQuestion() {
@@ -80,6 +88,13 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
             textViewOptionFour.text = question.optionFour
         } else {
             checkButton.text = "FINISH"
+// if the questions are done, start the result activity
+            Intent(this, ResultActivity::class.java).also {
+                it.putExtra(Constants.USER_NAME,name)
+                it.putExtra(Constants.SCORE, score)
+                it.putExtra(Constants.TOTAL_QUESTIONS,questionList.size)
+                startActivity(it)
+            }
         }
 
         currentPosition++
@@ -144,11 +159,11 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun checkAnswer() {
         answered = true
+
         if (selectedAnswer == currentQuestion.correctAnswer) {
 
-//            selectedOptionScore++
-
-           highlightAnswer(selectedAnswer)
+            score ++
+            highlightAnswer(selectedAnswer)
         } else {
             when (selectedAnswer) {
                 1 -> {
