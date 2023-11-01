@@ -16,7 +16,7 @@ object Constants {
         val quest2 = Question(
             1, "What country does this flag represent?", R.drawable.flag_of_argentina,
             "Uganda", "Kenya", "Andora", "Argentina",
-            3
+            4
         )
         questions.add(quest2)
 
@@ -72,7 +72,7 @@ object Constants {
         val quest10 = Question(
             1, "What country does this flag represent?", R.drawable.flag_of_south_sudan,
             "Barbadus", "Kenya", "Republic of South Sudan", "Haiti",
-            1
+            3
         )
         questions.add(quest10)
 

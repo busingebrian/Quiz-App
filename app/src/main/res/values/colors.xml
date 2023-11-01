@@ -14,4 +14,6 @@
     <color name="grey">#A9A9A9</color>
     <color name="navish">#394867</color>
     <color name="creamy">#F1F6F9</color>
+    <color name="correct">#A7D397</color>
+    <color name="incorrect">#FF8080</color>
 </resources>

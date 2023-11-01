@@ -35,17 +35,18 @@
             android:orientation="horizontal"
             android:weightSum="10"
             android:layout_marginTop="15dp"
-            android:gravity="center">
+            android:gravity="center_horizontal">
             <ProgressBar
                 android:id="@+id/progressBar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="9"
+                android:layout_weight="8.5"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:indeterminate="false"
                 android:minHeight="50dp"
                 android:max="10"
-                tools:progress="7" />
+                tools:progress="7"
+                android:paddingStart="5dp"/>
 
             <TextView
                 android:id="@+id/text_view_progressBar"
@@ -53,7 +54,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginStart="5dp"
-                android:layout_weight="1"
+                android:layout_weight="1.5"
                 android:gravity="center"
                 android:textAlignment="center"
                 tools:text="0/10" />
