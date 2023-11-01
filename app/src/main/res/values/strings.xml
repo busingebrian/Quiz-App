@@ -6,4 +6,9 @@
     <string name="please_enter_your_name">Please enter your name</string>
     <string name="hint_name">Name</string>
     <string name="national_flag">national flag</string>
+    <string name="check">Check</string>
+    <string name="option_4">Option 4</string>
+    <string name="option_3">Option 3</string>
+    <string name="option_2">Option 2</string>
+    <string name="option_1">Option 1</string>
 </resources>
