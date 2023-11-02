@@ -4,11 +4,16 @@ import com.example.quiz_app.R
 import com.example.quiz_app.model.Question
 
 object Constants {
+
+    const val USER_NAME = "suer_name"
+    const val TOTAL_QUESTIONS = "total_questions"
+    const val SCORE = "correct_answers"
+
     fun getQuestions(): MutableList<Question> {
         val questions = mutableListOf<Question>()
         val quest1 = Question(
             1, "What country does this flag represent?", R.drawable.flag_of_andorra,
-            "Uganda", "Kenya", "Andora", "Barbadus",
+            "Uganda", "Kenya", "Andorra", "Barbados",
             3
         )
         questions.add(quest1)
@@ -16,7 +21,7 @@ object Constants {
         val quest2 = Question(
             1, "What country does this flag represent?", R.drawable.flag_of_argentina,
             "Uganda", "Kenya", "Andora", "Argentina",
-            3
+            4
         )
         questions.add(quest2)
 
@@ -72,7 +77,7 @@ object Constants {
         val quest10 = Question(
             1, "What country does this flag represent?", R.drawable.flag_of_south_sudan,
             "Barbadus", "Kenya", "Republic of South Sudan", "Haiti",
-            1
+            3
         )
         questions.add(quest10)
 
