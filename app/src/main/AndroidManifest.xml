@@ -9,9 +9,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/salon_bnb_logo_02"
+        android:icon="@drawable/quiz_3644414_1920"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/salon_bnb_logo_02"
+        android:roundIcon="@drawable/quiz_3644414_1920"
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.QuizApp"
         tools:targetApi="31">
